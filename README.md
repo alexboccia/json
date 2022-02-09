@@ -1,2 +1,2 @@
 # json
-learning json
+Learning JSON - Javascript Object Notation
