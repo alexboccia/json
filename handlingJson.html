@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSON</title>
+</head>
+<body>
+
+    <h1>Handling JSON</h1>
+    <div id="output"></div>
+
+    <script type="text/javascript">
+        var myObj = {
+
+            "names": [
+        
+                {
+                    "firstName": "Alex",
+                    "lastName": "Boccia"
+                },
+                {
+                    "firstName": "Naiara",
+                    "lastName": "Ribeiro"
+                },
+                {
+                    "firstName": "Hamilton",
+                    "lastName": "Boccia"
+                }
+        
+            ]
+        };
+
+        var users = myObj.names;
+        var html = '';
+        
+        for(var x in users) {
+            html += (Number(x)+1) + '. ' + users[x].firstName + ' ' + users[x].lastName + '<br>';
+        }
+
+        document.getElementById('output').innerHTML = html;
+        
+    </script>
+    
+</body>
+</html>
