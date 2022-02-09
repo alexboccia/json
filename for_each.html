@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learn JSON</title>
+</head>
+<body>
+        <h1>For each</h1>
+        <div id="output"></div>
+
+        <script type="text/javascript">
+
+            var myObj = {
+                "carros": [
+                    {
+                        "marca": "Toyota",
+                        "modelo": "Corolla",
+                        "ano": 2000
+                    },
+                    {
+                        "marca": "Honda",
+                        "modelo": "Civic",
+                        "ano": 2005
+                    },
+                    {
+                        "marca": "Mitsubish",
+                        "modelo": "Pathfinder",
+                        "ano": 2010
+                    }
+                ]
+            };
+
+            var output = document.getElementById('output');
+
+            myObj.carros.forEach(function(item){
+                output.innerHTML += "Marca: " + item.marca + '<br>'+ 
+                                    "Modelo: " + item.modelo + '<br>'+ 
+                                    "Ano: " + item.ano + '<br><br>';
+            });
+
+        </script>
+</body>
+</html>
